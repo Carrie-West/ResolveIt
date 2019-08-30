@@ -1,0 +1,12 @@
+class Player
+	def _int_ (self,health,name):
+		self.health=health
+		self.name=name
+no_players=input("How many players are there?")
+	players=Player()
+for _ in range(in(no_players)):
+	name=input("What is your name?")
+	players.append(Player(name))
+	health=input("What is your current health?")
+	players.append(Player(health))
+print((Player.name,Player.health))
