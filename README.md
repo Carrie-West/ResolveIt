@@ -50,7 +50,7 @@ Week:
 ### Weekly Updates
 Week 1: (2 Hours)
 
-1.Set Up Structure of Project and Github Repository 
+1.  Set Up Structure of Project and Github Repository 
 
 Week 2: (3.5 Hours)
 
