@@ -49,8 +49,11 @@ Week:
 
 ### Weekly Updates
 Week 1: (2 Hours)
+
 1.Set Up Structure of Project and Github Repository 
+
 Week 2: (3.5 Hours)
+
 1.   Decided to focus on 2-Player version, to be later redeveloped for larger multiplayer situations. 
 2.   Added Damage Spells. 
 3.   Added Stack Logic using the .append and .pop functions of Python lists.
