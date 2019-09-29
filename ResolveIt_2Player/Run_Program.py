@@ -7,9 +7,10 @@ import Player_Info
 from Damage_Spells import Shock, Lightning_Bolt
 import Creature_Info
 c=Creature_Info
-x=c.Creature("Doomed Dissenter", 1, 1)
-y=c.Creature("Carrion Feeder", 1, 1)
-print (c.Creature.creatureList)
+doomed=c.creatureCreate("Doomed Dissenter", 1, 1)
+carrion=c.creatureCreate("Carrion Feeder", 1, 1)
+print(c.Creature.creatureList)
+print(doomed.creatureToughness)
 player_list=Player_Info.start()
 
 stack=[]
@@ -36,9 +37,10 @@ while i<=len(stack):
                 print (Creature_Info.Creature.creatureList)
                 target=input("Which creature is this targetting?")
                 if target == "Doomed Dissenter":
-                    Creature_Info.Creature.name=doomedDissenter
-                    doomedDissenter.creatureToughness=Shock(doomedDissenter.creatureToughness)
-                    Creature_Info.Creature.creatureTriggeredAbility(doomedDissenter)      
+                    print(doomed.creatureToughness)
+                    doomed.creatureToughness=Shock(doomed.creatureToughness)
+                    print(doomed.creatureToughness)
+                    c.creatureTriggeredAbility(doomed.creatureName)      
                     print(Creature_Info.Creature.creatureList)
             else:
                 print("This is not a valid target")
