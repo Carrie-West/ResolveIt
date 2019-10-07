@@ -57,3 +57,15 @@ Week 2: (3.5 Hours)
 1.   Decided to focus on 2-Player version, to be later redeveloped for larger multiplayer situations. 
 2.   Added Damage Spells. 
 3.   Added Stack Logic using the .append and .pop functions of Python lists.
+
+Week 3: (2 hours)
+
+1. Added Counterspell functionality (list del function)
+
+Week 4: (3 hours)
+
+1. Began implementing creatures as a class.
+
+Week 5: (3 hours)
+
+1. Creatures can now be kept as objects based on a base class.
