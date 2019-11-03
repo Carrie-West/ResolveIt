@@ -69,3 +69,25 @@ Week 4: (3 hours)
 Week 5: (3 hours)
 
 1. Creatures can now be kept as objects based on a base class.
+
+Week 6 (2 hours):
+
+1. Added Creature Triggered Abilities.
+
+Week 7 (2 hours):
+
+1. Added Creature Activated Abilities.
+
+Week 8 (2 hours):
+
+1. Added Creature Board Wipe Spells
+
+Week 9 (2 hours):
+
+1. Added Indestructible as a keyword to creatures.
+
+Week 10 (2 hours):
+
+1. Added Hexproof as a keyword to creatures and ability for players.
+
+
