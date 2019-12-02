@@ -7,17 +7,39 @@ import Player_Info
 from Damage_Spells import Shock, Lightning_Bolt
 import Creature_Info
 c=Creature_Info
-doomed=c.creatureCreate("Doomed Dissenter", 1, 1, False, False)
-carrion=c.creatureCreate("Carrion Feeder", 1, 1, False, False)
-rhonas=c.creatureCreate("Rhonas the Indomnitable", 5, 5, True, False)
+doomed=c.creatureCreate("Doomed Dissenter", 1, 1, False, False, False)
+carrion=c.creatureCreate("Carrion Feeder", 1, 1, False, False, False)
+rhonas=c.creatureCreate("Rhonas the Indomitable", 5, 5, True, False, False)
 print(c.Creature.creatureList)
 print(carrion.indestructible)
 player_list=Player_Info.start()
 
+rhythmCheck = input("Is Rhythm of the Wild active right now? (Y/N)")
+if rhythmCheck == "Y":
+    for x in c.Creature.creatureList:
+        print(x)
+        riot=input("Should this creature gain haste or a +1/+1 counter? (HASTE OR COUNTER)")
+        if riot == "COUNTER":
+            if x == "Doomed Dissenter":
+                doomed.creaturePower +=1
+                doomed.creatureToughness +=1
+            elif x == "Carrion Feeder":
+                carrion.creaturePower +=1
+                carrion.creatureToughness +=1
+            elif x == "Rhonas the Indomitable":
+                rhonas.creaturePower +=1
+                rhonas.creatureToughness +=1
+        elif riot == "HASTE":
+            if x == "Doomed Dissenter":
+                doomed.haste = True
+            elif x == "Carrion Feeder":
+                carrion.haste = True
+            elif x == "Rhonas the Indomitable":
+                rhonas.haste = True
 stack=[]
+stack.append("LightningBolt")
+stack.append("LightningBolt")
 stack.append("Wrath of God")
-stack.append("LightningBolt")
-stack.append("LightningBolt")
 stack.append("Shock")
 stack.append("Counterspell")
 fizzle= "N"
@@ -112,16 +134,18 @@ while i<=len(stack):
                     print(doomedTriggers)
                 if x == "Carrion Feeder" and carrion.indestructible != True:
                     dying.append(x)
-                if x == "Rhonas the Indomnitable" and rhonas.indestructible != True:
+                if x == "Rhonas the Indomitable" and rhonas.indestructible != True:
                     dying.append(x)
                 if x == "Zombie" and z.indestructible != True:
                     dying.append(x)
-            print
-            for x in list(dying):
-                if x in c.Creature.creatureList:
-                    c.Creature.creatureList.remove(x)
-                    dying.remove(x)
-            while doomedTriggers > 0:
+            for y in list(dying):
+                if y in c.Creature.creatureList:
+                    c.Creature.creatureList.remove(y)
+                    dying.remove(y)
+            spawnTrigger = True
+            while spawnTrigger == True:
                 c.dissenterTrigger()
                 doomedTriggers =- 1
+                if doomedTriggers == 0:
+                    spawnTrigger = False
             print(c.Creature.creatureList)
