@@ -90,4 +90,11 @@ Week 10 (2 hours):
 
 1. Added Hexproof as a keyword to creatures and ability for players.
 
+Week 11 (2 hours):
+
+1. Began implementation of static Enchantment effects.
+
+Week 12 (2 Hours):
+
+1. Implemented Input Control Methods.
 
